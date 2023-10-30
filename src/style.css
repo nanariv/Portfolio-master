@@ -1,21 +1,17 @@
 html {
-  --section-background-color: linear-gradient(
-    to bottom left,
-    rgba(17, 16, 16, 0.582),
-    rgba(12, 8, 24, 0.904)
-  );
+  --section-background-color: linear-gradient(to bottom left,
+      rgba(17, 16, 16, 0.582),
+      rgba(12, 8, 24, 0.904));
 
-  --image-gradient: linear-gradient(
-    to bottom left,
-    rgba(17, 16, 16, 0.678),
-    rgba(12, 10, 22, 0.863)
-  );
+  --image-gradient: linear-gradient(to bottom left,
+      rgba(17, 16, 16, 0.678),
+      rgba(12, 10, 22, 0.863));
 
   --imp-text-color: #c770f0;
 }
 
-.purple {
-  color: var(--imp-text-color) !important;
+.highlight {
+  color: #0E7C7B !important;
 }
 
 button:focus {
@@ -31,9 +27,9 @@ button:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 999999;
-  background-color: #0c0513;
-  /* background-image: url(./Assets/pre.svg); */
+  z-index: 9;
+  background-color: #25595b;
+  background-image: url(./Assets/pre.svg); 
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -66,9 +62,37 @@ button:focus {
   border-radius: 12px;
 }
 
+.anim-gradient {
+  position: relative;
+  background: linear-gradient(90deg, #ffffff 0%, #92cea4 25%, #7eecff 50%, #ff8800 75%, #ffffff 100%);
+  background-size: 400% 400%;
+  animation: gradient 60s ease infinite;
+  z-index: 0;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.img-grey {
+  filter: grayscale(100%);
+}
+.img-grey:hover {
+  filter: grayscale(0%);
+}
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #D62246;
+  background: #8E3B46;
   border-radius: 12px;
 }
 
@@ -76,7 +100,7 @@ button:focus {
 /* Header Section  */
 /* --------- */
 .sticky {
-  background-color: #0E7C7B !important;
+  background-color: #0e7c7b00 !important;
   transition: all 0.3s ease-out 0s !important;
   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
   backdrop-filter: blur(15px) !important;
@@ -140,16 +164,30 @@ button:focus {
   opacity: 0.9 !important;
 }
 
+.navbar-brand .logo {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.logo {
+  color: #0E7C7B !important;
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+  padding-top: 15px;
+}
+
 @media (max-width: 767px) {
   .navbar {
     padding: 1rem 2rem !important;
     font-size: 1.4rem !important;
     background-color: #181a27 !important;
   }
+
   .navbar-nav .nav-item a::after {
     display: none !important;
   }
 }
+
 .navbar-brand {
   color: rgb(250, 250, 250) !important;
 }
@@ -160,10 +198,12 @@ button:focus {
 }
 
 .navbar-nav .nav-link {
-  color: #0E7C7B !important;
+  color: #4B1D3F !important;
   padding-right: 1rem !important;
   padding-left: 1rem !important;
   text-decoration: none !important;
+  font-weight: bold;
+
 }
 
 .nav-link {
@@ -182,27 +222,27 @@ button:focus {
 }
 
 .navbar-nav .nav-item a {
-  font-weight: 400;
+  font-weight: 900;
   transition: all 0.3s ease-out 0s;
   position: relative;
-  z-index: 1;
+  z-index: 5;
 }
 
-.navbar-nav .nav-item a::after {
+.navbar-nav .nav-item a:after {
   content: "";
   position: relative;
   display: block;
   height: 5px;
-  width: 0;
+  width: 0px;
   border-radius: 16px;
-  background: #D62246;
+  background: #0E7C7B;
   bottom: 1px;
   left: 0;
-  z-index: -1;
+  z-index: 5;
   transition: all 0.3s ease-out 0s;
 }
 
-.navbar-nav .nav-item a:hover::after {
+.navbar-nav .nav-item a:hover:after {
   width: 100%;
 }
 
@@ -210,10 +250,14 @@ button:focus {
 /* Home section */
 /* --------- */
 .wave {
-  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.1s; /* Change to speed up or slow down */
-  animation-iteration-count: infinite; /* Never stop waving :) */
-  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  animation-name: wave-animation;
+  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.1s;
+  /* Change to speed up or slow down */
+  animation-iteration-count: infinite;
+  /* Never stop waving :) */
+  transform-origin: 70% 70%;
+  /* Pivot around the bottom-left palm */
   display: inline-block;
 }
 
@@ -221,28 +265,38 @@ button:focus {
   0% {
     transform: rotate(0deg);
   }
+
   10% {
     transform: rotate(14deg);
-  } /* The following five values can be played with to make the waving more or less extreme */
+  }
+
+  /* The following five values can be played with to make the waving more or less extreme */
   20% {
     transform: rotate(-8deg);
   }
+
   30% {
     transform: rotate(14deg);
   }
+
   40% {
     transform: rotate(-4deg);
   }
+
   50% {
     transform: rotate(10deg);
   }
+
   60% {
     transform: rotate(0deg);
-  } /* Reset for the last half to pause */
+  }
+
+  /* Reset for the last half to pause */
   100% {
     transform: rotate(0deg);
   }
 }
+
 #tsparticles {
   position: fixed !important;
   background-repeat: no-repeat !important;
@@ -282,37 +336,88 @@ button:focus {
 }
 
 .main-name {
-  color: #1b1b1e;
+  /* color: #1b1b1e; */
 }
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
-  color: #be6adf !important;
+  color: #4B1D3F !important;
   font-weight: 600 !important;
 }
+
 .Typewriter__cursor {
   font-size: 2.4em !important;
-  color: #b562d6 !important;
+  color: #0E7C7B !important;
 }
 
+.block {
+  position: relative;
+  margin: 300px auto 0;
+  /* background: linear-gradient(0deg, #000, #272727); */
+  margin-top: 9em !important;
+}
+
+.block:before,
+.block:after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(45deg, #99001a, #254140, #00fffb, #ffee00, #000000, #9900ff,
+      #b15e6c, #224444, #00fffb, #000000);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.block:after {
+  filter: blur(50px);
+}
+
+.relative {
+  position: relative;
+}
+
+.text-wrap {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
 @media (max-width: 767px) {
   .Typewriter__wrapper {
     font-size: 1.4em !important;
     font-weight: 500 !important;
     position: absolute !important;
   }
+
   .Typewriter__cursor {
     display: none !important;
   }
 }
 
-.myAvtar {
+.nanProfile {
   justify-content: center !important;
-  padding-top: 9em !important;
+  padding: 2px !important;
 }
 
 @media (max-width: 767px) {
-  .myAvtar {
+  .nanProfile {
     padding-top: 2em !important;
     padding-bottom: 2em !important;
   }
@@ -322,10 +427,11 @@ button:focus {
   position: relative;
   padding-bottom: 70px !important;
   padding-top: 70px !important;
+  margin-top: 12em;
 }
 
 .home-about-description {
-  color: white !important;
+  color: #8E3B46 !important;
   padding-top: 100px !important;
   padding-bottom: 20px !important;
   text-align: center;
@@ -333,8 +439,9 @@ button:focus {
 
 .home-about-body {
   padding-top: 50px;
-  font-size: 1.2em !important;
+  font-size: 1.6em !important;
   text-align: left;
+  padding-right: 15px;
 }
 
 .home-about-social {
@@ -399,6 +506,8 @@ button:focus {
   color: #700c86 !important;
 }
 
+
+
 /* --------- */
 /* Footer */
 /* --------- */
@@ -406,8 +515,9 @@ button:focus {
   background-color: rgb(10, 4, 22);
   bottom: 0 !important;
   padding-top: 10px !important;
-  padding-bottom: 8px !important ;
+  padding-bottom: 8px !important;
 }
+
 .footer-copywright {
   text-align: center !important;
 }
@@ -433,6 +543,7 @@ button:focus {
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
 }
+
 .footer-icons {
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
@@ -442,6 +553,7 @@ button:focus {
 .blockquote-footer {
   color: #a588c0 !important;
 }
+
 /* --------- */
 /* Projects */
 /* --------- */
@@ -468,6 +580,7 @@ button:focus {
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
 }
+
 .project-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
@@ -528,10 +641,12 @@ button:focus {
   background-color: #6d20c5d7 !important;
   border-color: #6d20c5d7 !important;
 }
+
 .btn:focus {
   outline: none !important;
   box-shadow: none !important;
 }
+
 .project-heading {
   color: white !important;
   font-size: 2.3em !important;
@@ -556,7 +671,7 @@ button:focus {
   margin: 15px !important;
   padding: 10px !important;
   opacity: 0.93 !important;
-  border: 1.7px solid D62246 !important;
+  border: 1.7px solid 8E3B46 !important;
   vertical-align: middle !important;
   text-align: center !important;
   border-radius: 5px !important;
@@ -577,6 +692,7 @@ button:focus {
   overflow: hidden !important;
   border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
 }
+
 .tech-icon-images {
   padding: 20px !important;
   line-height: 1.6 !important;
@@ -599,6 +715,7 @@ button:focus {
     padding-top: 0 !important;
   }
 }
+
 /* --------- */
 /* Resume */
 /* --------- */
@@ -636,6 +753,7 @@ button:focus {
     padding-left: 15px !important;
   }
 }
+
 .resume .resume-title {
   font-size: 2em;
   font-weight: 700;
@@ -712,10 +830,12 @@ button:focus {
   animation-fill-mode: forwards;
   animation-duration: 0.85s;
 }
+
 @keyframes likeAnimation {
   0% {
     transform: scale(1.5);
   }
+
   100% {
     transform: scale(1);
   }
@@ -728,7 +848,7 @@ button:focus {
 
 .fork-btn-inner {
   line-height: 1.4em !important;
-  background-color: #934cce5e !important;
+  background-color: #4B1D3F !important;
   padding: 0.25rem 1.1rem !important;
   vertical-align: middle !important;
   text-align: center !important;
@@ -739,6 +859,7 @@ button:focus {
   background-color: #a24dd386 !important;
   border-color: #a24dd386 !important;
 }
+
 .fork-btn-inner::after {
   display: none !important;
 }

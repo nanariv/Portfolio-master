@@ -39,7 +39,7 @@ function Header() {
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-          <a className="nav-link">NANARIV</a>
+          <p className="logo">NANARIV</p>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
