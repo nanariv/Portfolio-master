@@ -52,7 +52,6 @@ function About() {
               options={defaultOptions}
               height={500}
               width={600}
-              style={{ marginTop: '-4em' }}
             />
           </Col>
         </Row>
@@ -62,9 +61,9 @@ function About() {
 
         <Techstack />
 
-        <h1 className="project-heading">
+        {/* <h1 className="project-heading">
           <strong className="highlight">Tools</strong> I use
-        </h1>
+        </h1> */}
         {/* <Toolstack /> */}
 
         <Github />
