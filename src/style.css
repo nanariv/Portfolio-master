@@ -311,6 +311,7 @@ button:focus {
 
 .home-header {
   padding-top: 80px !important;
+  min-height: 45em;
 }
 
 .home-section {
@@ -353,7 +354,9 @@ button:focus {
   font-size: 2.4em !important;
   color: #0E7C7B !important;
 }
-
+.Typewriter {
+  min-height: 3em;
+}
 .block {
   position: relative;
   margin: 300px auto 0;
@@ -403,6 +406,11 @@ button:focus {
   top: 50%;
   transform: translateY(-50%);
 }
+@media (min-width: 767px) and (max-width: 992px) {
+  .Typewriter,.heading-name,.home-about-body {
+    text-align: center;
+  }
+}
 @media (max-width: 767px) {
   .Typewriter__wrapper {
     font-size: 1.4em !important;
@@ -439,6 +447,7 @@ button:focus {
   padding-top: 100px !important;
   padding-bottom: 20px !important;
   text-align: center;
+  min-height: 45em;
 }
 
 .home-about-body {

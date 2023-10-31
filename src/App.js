@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { ThemeProvider } from 'react-ui'
 import Preloader from "../src/components/Pre";
 import Header from "./components/Header";
 import Home from "./components/Home/Home";
@@ -29,21 +30,26 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <Preloader load={load} />
-      <div className="App anim-gradient" id={load ? "no-scroll" : "scroll"}>
-        <Header />
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          {/* <Route path="/project" element={<Projects />} /> */}
-          <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="*" element={<Navigate to="/"/>} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <ThemeProvider
+      breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs']}
+      minBreakpoint="xs"
+    >
+      <Router>
+        <Preloader load={load} />
+        <div className="App anim-gradient" id={load ? "no-scroll" : "scroll"}>
+          <Header />
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            {/* <Route path="/project" element={<Projects />} /> */}
+            <Route path="/about" element={<About />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 }
 

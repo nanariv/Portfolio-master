@@ -24,6 +24,16 @@ function About() {
       <Container>
         <Row style={{ justifyContent: "center", padding: "10px" }}>
           <Col
+            md={5}
+            className="about-img"
+          >
+            <Lottie
+              options={defaultOptions}
+              height={500}
+              width={'100%'}
+            />
+          </Col>
+          <Col
             md={7}
             style={{
               justifyContent: "center",
@@ -43,16 +53,6 @@ function About() {
               My goal is to seamlessly integrate my frontend expertise with backend proficiency, allowing me to create holistic, user-centered solutions that deliver a superior user experience while addressing complex technical challenges.<br />
             </h1>
             <Aboutcard />
-          </Col>
-          <Col
-            md={5}
-            className="about-img"
-          >
-            <Lottie
-              options={defaultOptions}
-              height={500}
-              width={600}
-            />
           </Col>
         </Row>
         <h1 className="project-heading">

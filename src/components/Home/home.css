@@ -181,15 +181,56 @@
     transform: rotateY(180deg);
 }
 
+@media (max-width: 410px) {
+    .timeline-wrap .content h2{
+        padding: 0;
+    }
+}
+
+@media (min-width: 250px) and (max-width: 992px) {
+    .timeline .d-xs-none {
+        display: none;
+    }
+}
+@media (min-width: 992px) {
+    .timeline .d-lg-block {
+        display: block;
+    }
+}
+
+@media (max-width: 992px) {
+    .timeline  .details {
+        margin: 0;
+        padding: 10px 0 0 0;
+    }
+
+    .timeline .flip-card-front {
+        position: absolute;
+        top: 0em;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        width: 10em;
+        height: 6em;
+        background-image: url(../../Assets/uniLogo.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+    }
+}
+
 @media (max-width: 767.98px) {
     .timeline::after {
         left: 90px;
     }
 
+    .timeline {
+        padding: 20em 0px;
+    }
+
     .timeline-wrap {
         width: 100%;
         padding-left: 120px;
-        padding-right: 30px;
+        padding-right: 0px;
     }
 
     .timeline-wrap.right {

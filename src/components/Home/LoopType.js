@@ -30,7 +30,7 @@ function Type(key,role,autoStart) {
         ],
         autoStart: autoStart,
         loop: true,
-        pauseFor: 5000,
+        pauseFor: 5000
       }}
     />
   );

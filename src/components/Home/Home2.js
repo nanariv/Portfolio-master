@@ -16,7 +16,7 @@ function Home2() {
       <Particle />
       <Container>
         <Row>
-          <Col md={8} className="home-about-description relative">
+          <Col md={12} lg={8} className="home-about-description relative">
             <div className="text-wrap">
               <p className="home-about-body">
                 Let's build something amazing together.
@@ -47,7 +47,7 @@ function Home2() {
               </p>
             </div>
           </Col>
-          <Col md={4} className="nanProfile block">
+          <Col md={12} lg={4} className="nanProfile block">
             <img src={myImg} className="img-fluid img-grey" alt="avatar" />
           </Col>
         </Row>
@@ -55,7 +55,7 @@ function Home2() {
       <Container>
           <Timeline />
           <Row>
-            <Col md={12} className="home-about-social">
+            <Col md={12} lg={12} className="home-about-social">
               <h1>FIND ME ON</h1>
               <p>
                 Feel free to <span className="highlight">connect </span>with me

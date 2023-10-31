@@ -21,7 +21,7 @@ function Home() {
         <Particle />
         <Container className="home-content">
           <Row>
-            <Col md={5} className="home-header">
+            <Col md={12} lg={5} className="home-header">
               <h1 className="heading-name">
                 I am
                 <strong className="main-name"> Nan.  </strong>
@@ -32,11 +32,11 @@ function Home() {
               </div>
             </Col>
 
-            <Col md={7} style={{ paddingBottom: 20 }}>
+            <Col md={12} lg={7} style={{ paddingBottom: 20 }}>
             <Lottie
                 options={defaultOptions}
-                height={800}
-                width={800}
+                height={'100%'}
+                width={'100%'}
                 style={{ marginTop: '-7em' }} 
               />
             </Col>
