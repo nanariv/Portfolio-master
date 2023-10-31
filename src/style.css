@@ -66,8 +66,9 @@ button:focus {
   position: relative;
   background: linear-gradient(90deg, #ffffff 0%, #92cea4 25%, #7eecff 50%, #ff8800 75%, #ffffff 100%);
   background-size: 400% 400%;
-  animation: gradient 60s ease infinite;
+  animation: gradient 50s ease infinite;
   z-index: 0;
+  overflow-x: hidden;
 }
 
 @keyframes gradient {
@@ -174,8 +175,11 @@ button:focus {
   padding-right: 1rem !important;
   padding-left: 1rem !important;
   padding-top: 15px;
+  /* text-shadow: -2px 3px 1px rgba(246,255,0,0.53); */
 }
-
+.red {
+  color: rgb(240,0,78);
+}
 @media (max-width: 767px) {
   .navbar {
     padding: 1rem 2rem !important;

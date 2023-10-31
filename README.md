@@ -15,10 +15,6 @@
 
 </center>
 
-## Built With
-
-My personal portfolio <a href="https://nanariv.vercel.app/" target="_blank">nanariv.tech</a> which features some of my github projects as well as my resume and technical skills.<br/>
-
 This project was built using these technologies.
 
 - React.js
@@ -48,3 +44,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.
 
 
+Inspiration Credit:  <a href="https://github.com/soumyajit4419">Soumyajit4419.</a>
