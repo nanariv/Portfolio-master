@@ -7,11 +7,13 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import Particle from "../Particle";
 import Timeline from "./Timeline";
 
 function Home2() {
   return (
     <Container fluid className="home-about-section" id="about">
+      <Particle />
       <Container>
         <Row>
           <Col md={8} className="home-about-description relative">
@@ -49,27 +51,27 @@ function Home2() {
             <img src={myImg} className="img-fluid img-grey" alt="avatar" />
           </Col>
         </Row>
-        <Row>
-          <Timeline/>
-        </Row>
-        <Row>
-          <Col md={12} className="home-about-social">
-            <h1>FIND ME ON</h1>
-            <p>
-              Feel free to <span className="highlight">connect </span>with me
-            </p>
-            <ul className="home-about-social-links">
-              <li className="social-icons">
-                <a
-                  href="https://github.com/nanariv"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiFillGithub />
-                </a>
-              </li>
-              {/* <li className="social-icons">
+      </Container>
+      <Container>
+          <Timeline />
+          <Row>
+            <Col md={12} className="home-about-social">
+              <h1>FIND ME ON</h1>
+              <p>
+                Feel free to <span className="highlight">connect </span>with me
+              </p>
+              <ul className="home-about-social-links">
+                <li className="social-icons">
+                  <a
+                    href="https://github.com/nanariv"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="icon-colour  home-social-icons"
+                  >
+                    <AiFillGithub />
+                  </a>
+                </li>
+                {/* <li className="social-icons">
                 <a
                   href="https://twitter.com/nanariv"
                   target="_blank"
@@ -79,17 +81,17 @@ function Home2() {
                   <AiOutlineTwitter />
                 </a>
               </li> */}
-              <li className="social-icons">
-                <a
-                  href="https://www.linkedin.com/in/nanariv/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <FaLinkedinIn />
-                </a>
-              </li>
-              {/* <li className="social-icons">
+                <li className="social-icons">
+                  <a
+                    href="www.linkedin.com/in/nan-ariv"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="icon-colour home-social-icons"
+                  >
+                    <FaLinkedinIn />
+                  </a>
+                </li>
+                {/* <li className="social-icons">
                 <a
                   href="https://www.instagram.com/nanariv"
                   target="_blank"
@@ -99,10 +101,10 @@ function Home2() {
                   <AiFillInstagram />
                 </a>
               </li> */}
-            </ul>
-          </Col>
-        </Row>
-      </Container>
+              </ul>
+            </Col>
+          </Row>
+        </Container>
     </Container>
   );
 }

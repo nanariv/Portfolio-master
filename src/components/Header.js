@@ -37,9 +37,9 @@ function Header() {
       expand="md"
       className={navColour ? "sticky" : "navbar"}
     >
-      <Container>
+      <Container className="p-0">
         <Navbar.Brand href="/" className="d-flex">
-          <p className="logo">NANARIV</p>
+          <p className="logo">N<span className="red">A</span>N<span className="red">A</span>RIV</p>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -69,7 +69,7 @@ function Header() {
               </Nav.Link>
             </Nav.Item>
 
-            <Nav.Item>
+            {/* <Nav.Item>
               <Nav.Link
                 as={Link}
                 to="/project"
@@ -80,7 +80,7 @@ function Header() {
                 />{" "}
                 Projects
               </Nav.Link>
-            </Nav.Item>
+            </Nav.Item> */}
 
             <Nav.Item>
               <Nav.Link
