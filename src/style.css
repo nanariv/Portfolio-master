@@ -896,10 +896,9 @@ button:focus {
 } */
 
 .gr_grid_book_container {
-  /* customize book cover container div here */
-  float: left;
-width: 39px;
-height: 60px;
-padding: 0px 0px;
-overflow: hidden;
+  height: 5em;
+  overflow: hidden;
+  padding: 0;
+  width: 4em;
+  display: inline-block;
 }
