@@ -17,6 +17,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { inject } from '@vercel/analytics';
 
 function App() {
   const [load, updateLoad] = useState(true);
@@ -28,7 +29,7 @@ function App() {
 
     return () => clearTimeout(timer);
   }, []);
-
+  inject();
   return (
     <ThemeProvider
       breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs']}
