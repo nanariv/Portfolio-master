@@ -340,9 +340,9 @@ button:focus {
   padding-left: 49px !important;
 }
 
-.main-name {
-  /* color: #1b1b1e; */
-}
+/* .main-name {
+  color: #1b1b1e;
+} */
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
@@ -875,4 +875,31 @@ button:focus {
 
 .fork-btn-inner::after {
   display: none !important;
+}
+/* HOBBIES */
+.hobby-wrap {
+  padding: 10px;
+  opacity: 0.93 !important;
+  border: 1.7px solid 8E3B46 !important;
+  border-radius: 5px !important;
+  box-shadow: 4px 5px 4px 3px rgba(152, 5, 84, 0.65) !important;
+  overflow: hidden !important;
+  transition: all 0.4s ease 0s !important;
+}
+.hobby-head {
+  padding: 40px 10px 10px 10px;
+  margin-top: 6em;
+}
+
+/* .gr_grid_container {
+  customize grid container div here. eg: width: 500px;
+} */
+
+.gr_grid_book_container {
+  /* customize book cover container div here */
+  float: left;
+width: 39px;
+height: 60px;
+padding: 0px 0px;
+overflow: hidden;
 }
