@@ -2,10 +2,11 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import wordpress from "../../Assets/Projects/wordpress.PNG";
-import nirvana from "../../Assets/Projects/nirvana.png";
-import petronia2 from "../../Assets/Projects/petronia2.PNG";
-import literary from "../../Assets/Projects/literary.png";
+import wordpress from "../../Assets/Projects/wordpress.jpeg";
+import bags from "../../Assets/Projects/bags.jpeg";
+import petronia from "../../Assets/Projects/petronia.jpeg";
+import literary from "../../Assets/Projects/literary.jpeg";
+import cine from "../../Assets/Projects/cine.jpeg";
 
 function Projects() {
   return (
@@ -21,7 +22,7 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col xs={12} lg={4} className="project-card">
             <ProjectCard
-              imgPath={nirvana}
+              imgPath={bags}
               isBlog={false}
               title="Nirvana"
               description="An e-commerce website for bags build using HTML, JavaScript, MYSQL, Flask AND Python"
@@ -34,31 +35,29 @@ function Projects() {
               imgPath={literary}
               isBlog={false}
               title="Literary Labyrinth"
-              description="A library application built using React and Express JS. "
+              description="A library application with checkout features built using React and Express JS. "
               ghLink="https://github.com/nanariv/Library-App"
             />
           </Col>
 
-          {/* <Col xs={12} lg={4} className="project-card">
+          <Col xs={12} lg={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={cine}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/nanariv/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="CineVault"
+              description="A movie database and review web application built using Java Spring Boot, MongoDB and React JS"
+              ghLink="https://github.com/nanariv/CineVault"  
             />
-          </Col> */}
+          </Col> 
 
           <Col xs={12} lg={4} className="project-card">
             <ProjectCard
-              imgPath={petronia2}
+              imgPath={petronia}
               isBlog={false}
               title="Plague of Petronia"
               description="A single player, role playing video game(RPG). Face off with Aphosis!"
               ghLink="https://gitlab.com/ariv.nandhini/plagueofpetronia"
               demoLink="https://nanariv.itch.io/plague-of-petronia"
-              classAdd="game-wrap"
             />
           </Col>
 
