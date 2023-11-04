@@ -79,7 +79,7 @@ function Projects() {
               isBlog={true}
               title="Web Weaver Nan"
               description="Welcome to my bi-weekly blog on all things frontend development!"
-              demoLink="https://webweavernan.wordpress.com/"
+              ghLink="https://webweavernan.wordpress.com/"
             />
           </Col>
         </Row>
