@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/nan.jpg";
 import {
@@ -9,8 +9,32 @@ import {
 import { FaLinkedinIn } from "react-icons/fa";
 import Particle from "../Particle";
 import Timeline from "./Timeline";
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
+// function LinkedInModal(props) {
+//   return (
+//     <Modal
+//       {...props}
+//       size="lg"
+//       aria-labelledby="contained-modal-title-vcenter"
+//       centered>
+//       <Modal.Body>
+//       <div className="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="nan-ariv" data-version="v1"><a className="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/nan-ariv?trk=profile-badge">Nandhini Ariv</a></div>
+//       </Modal.Body>
+//       <Modal.Footer>
+//         <Button onClick={props.onHide}>Close</Button>
+//       </Modal.Footer>
+//     </Modal>
+//   );
+// }
 function Home2() {
+  // const [modalShow, setModalShow] = useState(false);
+  
+// function openModal(e) {
+//   e && e.preventDefault(); 
+//   setModalShow(true)
+// }
   return (
     <Container fluid className="home-about-section" id="about">
       <Particle />
@@ -53,25 +77,25 @@ function Home2() {
         </Row>
       </Container>
       <Container>
-          <Timeline />
-          <Row>
-            <Col md={12} lg={12} className="home-about-social">
-              <h1>FIND ME ON</h1>
-              <p>
-                Feel free to <span className="highlight">connect </span>with me
-              </p>
-              <ul className="home-about-social-links">
-                <li className="social-icons">
-                  <a
-                    href="https://github.com/nanariv"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="icon-colour  home-social-icons"
-                  >
-                    <AiFillGithub />
-                  </a>
-                </li>
-                {/* <li className="social-icons">
+        <Timeline />
+        <Row>
+          <Col md={12} lg={12} className="home-about-social">
+            <h1>FIND ME ON</h1>
+            <p>
+              Feel free to <span className="highlight">connect </span>with me
+            </p>
+            <ul className="home-about-social-links">
+              <li className="social-icons">
+                <a
+                  href="https://github.com/nanariv"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
+                >
+                  <AiFillGithub />
+                </a>
+              </li>
+              {/* <li className="social-icons">
                 <a
                   href="https://twitter.com/nanariv"
                   target="_blank"
@@ -80,18 +104,23 @@ function Home2() {
                 >
                   <AiOutlineTwitter />
                 </a>
-              </li> */}
-                <li className="social-icons">
-                  <a
-                    href="www.linkedin.com/in/nan-ariv"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="icon-colour home-social-icons"
-                  >
-                    <FaLinkedinIn />
-                  </a>
-                </li>
-                {/* <li className="social-icons">
+              </li> 
+              onClick={openModal}*/}
+              <li className="social-icons" >
+                <a
+                  href="www.linkedin.com/in/nan-ariv"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour home-social-icons"
+                >
+                  <FaLinkedinIn />
+                </a>
+              </li>
+              {/* <LinkedInModal
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+              /> */}
+              {/* <li className="social-icons">
                 <a
                   href="https://www.instagram.com/nanariv"
                   target="_blank"
@@ -101,10 +130,10 @@ function Home2() {
                   <AiFillInstagram />
                 </a>
               </li> */}
-              </ul>
-            </Col>
-          </Row>
-        </Container>
+            </ul>
+          </Col>
+        </Row>
+      </Container>
     </Container>
   );
 }
