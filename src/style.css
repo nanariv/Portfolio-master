@@ -549,7 +549,16 @@ button:focus {
     text-align: center !important;
   }
 }
-
+@media (max-width: 1400px) {
+  .row .game-wrap .card-img-top {
+    min-height: 20em;
+  }
+}
+@media (max-width: 820px) {
+  .container .row .game-wrap .card-img-top {
+    min-height: 16em;
+  }
+}
 .footer h3 {
   font-size: 1em;
   color: white !important;
@@ -629,6 +638,9 @@ button:focus {
   transform: scale(1.02) !important;
   overflow: hidden !important;
   box-shadow: 0 3px 3px 5px rgba(155, 88, 173, 0.65) !important;
+}
+.game-wrap .card-img-top {
+  min-height: 24em;
 }
 
 .card-img-top {
