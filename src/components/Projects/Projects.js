@@ -3,8 +3,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import wordpress from "../../Assets/Projects/wordpress.PNG";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
 import nirvana from "../../Assets/Projects/nirvana.png";
 import petronia from "../../Assets/Projects/petronia.png";
 import literary from "../../Assets/Projects/literary.png";
@@ -64,18 +62,6 @@ function Projects() {
             />
           </Col>
 
-          
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={wordpress}
-              isBlog={true}
-              title="Web Weaver Nan"
-              description="Welcome to my bi-weekly blog on all things frontend development!"
-              demoLink="https://webweavernan.wordpress.com/"
-            />
-          </Col>
-
           {/* <Col md={4} className="project-card">
             <ProjectCard
               imgPath={emotion}
@@ -87,6 +73,15 @@ function Projects() {
               // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
             />
           </Col> */}
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={wordpress}
+              isBlog={true}
+              title="Web Weaver Nan"
+              description="Welcome to my bi-weekly blog on all things frontend development!"
+              demoLink="https://webweavernan.wordpress.com/"
+            />
+          </Col>
         </Row>
       </Container>
     </Container>
