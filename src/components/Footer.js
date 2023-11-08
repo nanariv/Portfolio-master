@@ -30,8 +30,8 @@ function Footer() {
               >
                 <AiFillGithub />
               </a>
-            {/* </li>
-            <li className="social-icons">
+             </li>
+            {/*<li className="social-icons">
               <a
                 href="https://twitter.com/nanariv"
                 style={{ color: "white" }}
