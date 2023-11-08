@@ -29,6 +29,7 @@ function Home() {
 
               <div style={{ padding: 50, textAlign: "left" }}>
                 <LoopType />
+                {/* I work with forward-thinking people to design and build interactive, accessible websites and products. From working on projects for likes of IBM, Tavant Technologies, Ashtel LLC, to working with startups in Academia, I've devoted more than a  decade to building tiny pockets in the web. */}
               </div>
             </Col>
 
