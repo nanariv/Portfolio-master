@@ -43,8 +43,8 @@ function Type(key,role,autoStart) {
           role
         ],
         autoStart: autoStart,
-        loop: true,
-        pauseFor: 5000
+        loop: false,
+        pauseFor: 500000
       }}
     />
   );
