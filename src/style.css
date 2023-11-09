@@ -345,18 +345,18 @@ button:focus {
 } */
 
 .Typewriter__wrapper {
-  font-size: 2.2em !important;
+  font-size: 1.5em !important;
   color: #4B1D3F !important;
   font-weight: 600 !important;
 }
 
 .Typewriter__cursor {
-  font-size: 2.4em !important;
+  font-size: 1.5em !important;
   color: #0E7C7B !important;
 }
-.Typewriter {
+/* .Typewriter {
   min-height: 3em;
-}
+} */
 .block {
   position: relative;
   margin: 300px auto 0;
